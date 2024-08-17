@@ -11,8 +11,8 @@ const ItemDetailsPrintWrapper = ({ items }) => {
       {/* This div will contain all the items to be printed */}
       <div ref={componentRef} className="card-container">
         {items.map((item, index) => (
-          <div key={index} className="card">
-            <ItemDetails
+          <div key={index} className="card ">
+            <ItemDetails 
               itemName={item.itemName}
               barcode={item.barcode}
               weight={item.weight}

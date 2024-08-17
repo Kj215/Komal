@@ -48,3 +48,10 @@
     background-color: #0056b3;
   }
   
+  .card .header {
+    display: flex;
+    justify-content: flex-end; /* Align logo to the right */
+    align-items: center; /* Center content vertically */
+    height: 6mm; /* Adjust based on your design */
+    margin-bottom: 2px; /* Add space below header if needed */
+  }
