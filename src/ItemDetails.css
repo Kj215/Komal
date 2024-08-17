@@ -8,12 +8,16 @@
  
   
   .first-column {
-    margin-right: 40px; /* Reduce margin to decrease the distance between columns */
+    margin-right: 15px; /* Reduce margin to decrease the distance between columns */
     /* You can add specific styling for the first column here */
   }
-  
+  .item-name{
+    font-size: 0.8em;
+    font-weight: bolder;
+
+  }
   .second-column {
-    margin-right: 5px;
+    margin-left: 5px;
    /* Reduce margin to decrease the distance between columns */
     /* Specific styling for the second column */
   }
@@ -24,7 +28,7 @@
     justify-content: left;
 
     margin-bottom: 10px;
-    margin-right: 3px; /* Reduce margin to decrease the distance between columns */
+    margin-left: 2px; /* Reduce margin to decrease the distance between columns */
   }
   
   .logo {
@@ -61,7 +65,7 @@
     margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: 0.3em;
+    font-size: 0.4em;
   }
   
   .detail-label-shop {
@@ -70,7 +74,7 @@
     font-weight: bold;
   }
   .detail-value{
-    font-size: 0.3em;
+    font-size: 0.4em;
     margin: 0;
     margin-left: 2px;
     font-weight: bold;

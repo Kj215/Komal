@@ -4,6 +4,7 @@
   }
   
   .card {
+    position: relative;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -39,5 +40,44 @@
   .print-button:active {
     transform: scale(0.95);
   }
-  
-  
+  /* Styles for the remove button */
+/* Cross button styling */
+.remove-button {
+  position: absolute;
+  top: 0px; /* Position from the top */
+  left: 100px; /* Position from the right */
+  width: 24px; /* Width of the button */
+  height: 24px; /* Height of the button */
+  background-color: #dc3545; /* Red background */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Make it round */
+  font-size: 16px; /* Font size for the cross */
+  text-align: center; /* Center the cross */
+  line-height: 24px; /* Center the cross vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Cross button hover and active states */
+.remove-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.remove-button:active {
+  background-color: #bd2130; /* Even darker red when clicked */
+  transform: scale(0.9); /* Slightly shrink the button when clicked */
+}
+
+.remove-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5); /* Custom focus outline */
+}
+
+/* Print styles */
+@media print {
+  .remove-button {
+    display: none; /* Hide the remove button during printing */
+  }
+}

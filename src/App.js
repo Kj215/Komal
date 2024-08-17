@@ -28,6 +28,9 @@ const App = () => {
       alert( 'Invalid username or password')  ;
     }
   };
+  const handleRemoveItem = (index) => {
+    setItems(items.filter((_, i) => i !== index));
+  };
 
   return (
     <div className="app">
@@ -36,7 +39,7 @@ const App = () => {
       ) : (
         <>
           <ItemDetailsForm onSubmit={handleFormSubmit} />
-          {items.length > 0 && <ItemDetailsPrintWrapper items={items} />}
+          {items.length > 0 && <ItemDetailsPrintWrapper items={items} onRemoveItem={handleRemoveItem} />}
         </>
       )}
     </div>
