@@ -22,7 +22,7 @@ const ItemDetails = forwardRef(({ itemName, barcode, weight, size, hallmark, HUI
         </div>
         <div className="detail-row">
           <span className="detail-label">Weight:</span>
-          <span className="detail-value">{weight}</span>
+          <span className="detail-value">{weight} gm</span>
         </div>
         <div className="detail-row">
           <span className="detail-label">Size:</span>
