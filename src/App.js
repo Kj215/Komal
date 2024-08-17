@@ -4,6 +4,8 @@ import ItemDetailsForm from './ItemDetailsForm';
 import LoginForm from './LoginForm';
 import './App.css';
 import logo from './Hallmark.svg';
+const user = process.env.REACT_APP_USERNAME
+const password = process.env.REACT_APP_PASSWORD
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -21,10 +23,10 @@ const App = () => {
 
   const handleLogin = (credentials) => {
     // Replace this with your authentication logic
-    if (credentials.username === 'user' && credentials.password === 'password') {
+    if (credentials.username === user && credentials.password === password) {
       setIsAuthenticated(true);
     } else {
-      alert('Invalid username or password');
+      alert(credentials.username + " "+ credentials.password+ 'Invalid username or password' + user + " "+password)  ;
     }
   };
 
