@@ -114,7 +114,7 @@ const ItemDetailsForm = ({ onSubmit }) => {
       <div>
         <label>Weight:</label>
         <input
-          type="text"
+          type="number"
           name="weight"
           value={formData.weight}
           onChange={handleChange}
