@@ -1,6 +1,12 @@
 import React, {forwardRef} from 'react';
 import './ItemDetails.css'; // Importing the CSS file
 
+const getTodayDate = () => {
+  const today = new Date();
+  const month = today.getMonth() + 1; // Months are zero-based
+  const year = today.getFullYear().toString().slice(-2); // Last two digits of the year
+  return `${month}/${year}`; // Remove leading zero from month
+};
 const ItemDetails = forwardRef(({ itemName, barcode, weight, size, hallmark, HUID, shopName, logo },ref) => {
   return (
     <div className="item-details-container printable-area" ref={ref} >
@@ -12,6 +18,7 @@ const ItemDetails = forwardRef(({ itemName, barcode, weight, size, hallmark, HUI
             <span key={index} className={`barcode-bar ${bar === '1' ? 'bar' : 'space'}`}></span>
           ))}
         </div>
+        <div className="item-name-date">{getTodayDate()}</div>
       </div>
 
       {/* Second Column: Details */}

@@ -8,7 +8,7 @@
  
   
   .first-column {
-    margin-top: 5px;
+    margin-top: 2px;
     margin-right: 15px; /* Reduce margin to decrease the distance between columns */
     /* You can add specific styling for the first column here */
   }
@@ -16,6 +16,10 @@
     font-size: 0.8em;
     font-weight: bolder;
 
+  }
+  .item-name-date{
+    font-size: 0.5em;
+    font-weight: bold;
   }
   .second-column {
     margin-left: 5px;
