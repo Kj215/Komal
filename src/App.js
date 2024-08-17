@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import ItemDetailsPrintWrapper from './ItemDetailsPrintWrapper';
+import ItemDetailsForm from './ItemDetailsForm';
+import LoginForm from './LoginForm';
 import './App.css';
+import logo from './Hallmark.svg';
 
-function App() {
+const App = () => {
+  const [items, setItems] = useState([]);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleFormSubmit = (formData) => {
+    const newItem = {
+      ...formData,
+      shopName: 'KJB', // Static shop name
+      barcode: '10101010101010101010101010101010101010101010101', // Static barcode
+      logo: logo, // Static logo
+    };
+    setItems([...items, newItem]);
+  };
+
+  const handleLogin = (credentials) => {
+    // Replace this with your authentication logic
+    if (credentials.username === 'user' && credentials.password === 'password') {
+      setIsAuthenticated(true);
+    } else {
+      alert('Invalid username or password');
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {!isAuthenticated ? (
+        <LoginForm onLogin={handleLogin} />
+      ) : (
+        <>
+          <ItemDetailsForm onSubmit={handleFormSubmit} />
+          {items.length > 0 && <ItemDetailsPrintWrapper items={items} />}
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default App;

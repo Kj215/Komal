@@ -1,0 +1,92 @@
+.item-details-container {
+    display: flex;
+    direction: ltr; 
+    flex-direction: row;
+    justify-content: flex-end;  /* Ensure the columns are side by side */
+    width: 100%;
+    margin-top: 0;
+  }
+ 
+  
+  .first-column {
+    margin-top: 0;
+    margin-right: 40px; /* Reduce margin to decrease the distance between columns */
+    /* You can add specific styling for the first column here */
+  }
+  
+  .second-column {
+    margin-top: 0;
+    margin-right: 5px;
+   /* Reduce margin to decrease the distance between columns */
+    /* Specific styling for the second column */
+  }
+  
+  .third-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-right: 3px; /* Reduce margin to decrease the distance between columns */
+  }
+  
+  .logo {
+    max-width: 100%; /* Ensures the image fits within the column */
+    height: 75vh;
+    margin-top: 2px;
+  }
+  
+  /* Additional styling for barcode and other details */
+  .barcode {
+    display: flex;
+  }
+  
+  .barcode-bar {
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+  }
+  
+  .barcode-bar.bar {
+    background-color: black;
+  }
+  
+  .barcode-bar.space {
+    background-color: white;
+  }
+  
+  .detail-row {
+    display: flex;
+    margin-top: 0;
+  }
+  
+  .detail-label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 0.3em;
+    margin-top: 0;
+  }
+  
+  .detail-label-shop {
+    margin:0;
+    font-size: 0.5em;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  .detail-value{
+    font-size: 0.3em;
+    margin: 0;
+    margin-left: 2px;
+    font-weight: bold;
+    margin-top: 0;
+
+  }
+  @media print {
+    .printable-item {
+      page-break-after: always; /* Ensures each item starts on a new page */
+    }
+  }
+  
+
+  
