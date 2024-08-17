@@ -26,7 +26,7 @@ const App = () => {
     if (credentials.username === user && credentials.password === password) {
       setIsAuthenticated(true);
     } else {
-      alert(credentials.username + " "+ credentials.password+ 'Invalid username or password' + user + " "+password)  ;
+      alert( 'Invalid username or password')  ;
     }
   };
 
