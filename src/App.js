@@ -14,7 +14,6 @@ const App = () => {
   const handleFormSubmit = (formData) => {
     const newItem = {
       ...formData,
-      shopName: 'KJB', // Static shop name
       barcode: '10101010101010101010101010101010101010101010101', // Static barcode
       logo: logo, // Static logo
     };

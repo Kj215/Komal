@@ -33,6 +33,7 @@
   .logo {
     max-width: 100%; /* Ensures the image fits within the column */
     height: 75vh;
+    margin-left: 15px;
     margin-top: 2px;
   }
   

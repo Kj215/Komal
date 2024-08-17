@@ -7,6 +7,7 @@ const ItemDetailsForm = ({ onSubmit }) => {
     weight: '',
     size: '',
     hallmark: '',
+    shopName : '',
     HUID: '',
   });
 
@@ -26,11 +27,22 @@ const ItemDetailsForm = ({ onSubmit }) => {
       size: '',
       hallmark: '',
       HUID: '',
+      shopName: '',
     });
   };
 
   return (
     <form onSubmit={handleSubmit} className="item-details-form">
+         <div>
+        <label>OWNER:</label>
+        <input 
+          type="text" 
+          name="shopName" 
+          value={formData.shopName} 
+          onChange={handleChange} 
+          required 
+        />
+      </div>
       <div>
         <label>Item Name:</label>
         <input 
