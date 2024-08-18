@@ -27,9 +27,6 @@ jobs:
           REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}
         run: npm run build
 
-      - name: deploy
-        run: gh-pages -d build
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
