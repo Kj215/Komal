@@ -52,6 +52,7 @@
     display: inline-block;
     width: 1px;
     height: 10px;
+    font-weight: bolder;
   }
   
   .barcode-bar.bar {
