@@ -64,7 +64,7 @@ const App = () => {
       setIsAuthenticated(true);
       setRemainingTime(3600); // Reset session time on login
     } else {
-      alert(user+"Invalid username or password" + password);
+      alert("Invalid username or password");
     }
   };
 
