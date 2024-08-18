@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Replace with your deployment branch if different
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Adjust this to your Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the React app
+        env:
+          REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}
+          REACT_APP_USERNAME: ${{ secrets.REACT_APP_USERNAME }}
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./build
