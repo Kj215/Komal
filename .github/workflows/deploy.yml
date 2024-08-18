@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build the React app
+      - name: Build the React
         env:
           REACT_APP_USERNAME: ${{ secrets.REACT_APP_USERNAME }}
           REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}
