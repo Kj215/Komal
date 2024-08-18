@@ -63,3 +63,62 @@ span{
   cursor: pointer;
   color: #f44336;
 }
+@media only screen and (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+
+  .login-form {
+    max-width: 90%;
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .logout-button {
+    top: 5px;
+    margin-bottom: 15px;
+    left:20px;
+
+    font-size: 14px;
+  }
+
+  .item-details-form input,
+  .item-details-form select {
+    font-size: 14px;
+  }
+
+  .warning-popup {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  /* Card container */
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+  .item-details-form {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  
+  
+}

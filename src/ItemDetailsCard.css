@@ -44,7 +44,7 @@
 /* Cross button styling */
 .remove-button {
   position: absolute;
-  top: 0px; /* Position from the top */
+  top: 5px; /* Position from the top */
   left: 100px; /* Position from the right */
   width: 25px; /* Width of the button */
   height: 25px; /* Height of the button */
@@ -77,7 +77,7 @@
 }
 .edit-button {
   position: absolute;
-  top: 0px; /* Position from the top */
+  top: 5px; /* Position from the top */
   left: 60px; /* Position from the right */
   width: 25px; /* Width of the button */
   height: 25px; /* Height of the button */
