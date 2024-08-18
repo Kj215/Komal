@@ -5,8 +5,14 @@ import LoginForm from "./LoginForm";
 import "./App.css";
 import logo from "./Hallmark.svg";
 
-const user = process.env.REACT_APP_USERNAME;
-const password = process.env.REACT_APP_PASSWORD;
+const user = process.env.NODE_ENV === 'development'
+  ? process.env.REACT_APP_USERNAME // Local development URL
+  :process.env.REACT_APP_USERNAME; // GitHub Pages URL
+
+const password = process.env.NODE_ENV === 'development'
+? process.env.REACT_APP_PASSWORD // Local development URL
+:process.env.REACT_APP_PASSWORD; // GitHub Pages URL
+
 
 const App = () => {
   const [items, setItems] = useState([]);
