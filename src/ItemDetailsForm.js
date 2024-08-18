@@ -31,8 +31,10 @@ const itemNames = [
 ];
 const hallmarks = [
   { label: "18K", value: "18K 750" },
-  { label: "22K", value: "22K 750" },
-  { label: "SILVER", value: "SILVER" },
+  { label: "22K", value: "22K 916" },
+  { label: "SILVER65", value: "SILVER 65" },
+  { label: "SILVER70", value: "SILVER 70" },
+  { label: "SILVER916", value: "SILVER 916" },
 ];
 
 const Owner = [
