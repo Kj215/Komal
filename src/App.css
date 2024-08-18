@@ -17,3 +17,49 @@ span{
   margin: 0;
   padding: 0;
 }
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #f44336;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logout-button:hover {
+  transform: scale(1.2);
+}
+
+.logout-button::before {
+  content: '\f011'; /* Unicode for power icon */
+  font-family: 'Font Awesome 5 Free'; /* Ensure you include FontAwesome in your project */
+  font-weight: 900; /* To get solid icon style */
+}
+
+.warning-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 0, 0.9);
+  padding: 20px;
+  border: 2px solid #f44336;
+  z-index: 1000;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f44336;
+}
