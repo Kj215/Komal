@@ -7,7 +7,7 @@ import logo from "./Hallmark.svg";
 
 const user = process.env.NODE_ENV === 'development'
   ? process.env.REACT_APP_USERNAME // Local development URL
-  :process.env.REACT_APP_USERNAME; // GitHub Pages URLS
+  :process.env.REACT_APP_USERNAME; // GitHub Pages URLSs
 
 const password = process.env.NODE_ENV === 'development'
 ? process.env.REACT_APP_PASSWORD // Local development URL
