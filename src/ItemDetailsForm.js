@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./ItemDetailsForm.css"; // Import the CSS file
 
 const itemNames = [
@@ -46,7 +46,7 @@ const Owner = [
   { label: "RADHIKA", value: "RAD" },
   { label: "RAJKOT", value: "RAJ" },
 ];
-const ItemDetailsForm = ({ onSubmit }) => {
+const ItemDetailsForm = ({ onSubmit,initialData}) => {
   const [formData, setFormData] = useState({
     itemName: "",
     weight: "",
@@ -55,6 +55,11 @@ const ItemDetailsForm = ({ onSubmit }) => {
     shopName: "",
     HUID: "",
   });
+  useEffect(() => {
+    if (initialData) {
+      setFormData(initialData); // Populate form with initial data if editing
+    }
+  }, [initialData]);
 
   const handleChange = (e) => {
     setFormData({
@@ -162,7 +167,7 @@ const ItemDetailsForm = ({ onSubmit }) => {
       </div>
 
       <button type="submit" className="add-item-button">
-        Add Item
+        {initialData ? 'Update Item' : 'Add Item'}
       </button>
     </form>
   );

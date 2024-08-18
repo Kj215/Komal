@@ -46,8 +46,8 @@
   position: absolute;
   top: 0px; /* Position from the top */
   left: 100px; /* Position from the right */
-  width: 24px; /* Width of the button */
-  height: 24px; /* Height of the button */
+  width: 25px; /* Width of the button */
+  height: 25px; /* Height of the button */
   background-color: #dc3545; /* Red background */
   color: white; /* White text color */
   border: none; /* Remove default border */
@@ -57,6 +57,7 @@
   line-height: 24px; /* Center the cross vertically */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  right: 5px;
 }
 
 /* Cross button hover and active states */
@@ -74,10 +75,73 @@
   outline: none; /* Remove default outline */
   box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5); /* Custom focus outline */
 }
+.edit-button {
+  position: absolute;
+  top: 0px; /* Position from the top */
+  left: 60px; /* Position from the right */
+  width: 25px; /* Width of the button */
+  height: 25px; /* Height of the button */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Make it round */
+  font-size: 16px; /* Font size for the cross */
+  text-align: center; /* Center th
+  e cross */
+  line-height: 24px; /* Center the cross vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  right: 30px;
+  background-color: #0998f0; 
+}
 
+/* Cross button hover and active states */
+.edit-button:hover {
+  background-color: #1188d2; /* Darker red on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.edit-button:active {
+  transform: scale(0.9); /* Slightly shrink the button when clicked */
+}
+
+.edit-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5); /* Custom focus outline */
+}
+/* Tooltip styles */
+.remove-button::after,
+.edit-button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.remove-button:hover::after,
+.edit-button:hover::after {
+  opacity: 1;
+}
+
+/* Adjust the hover effect for better visibility */
+.edit-button:hover {
+  color: #0056b3;
+}
+
+.remove-button:hover {
+  color: darkred;
+}
 /* Print styles */
 @media print {
-  .remove-button {
+  .remove-button,.edit-button {
     display: none; /* Hide the remove button during printing */
   }
 }

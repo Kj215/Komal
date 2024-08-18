@@ -3,7 +3,7 @@ import ReactToPrint from 'react-to-print';
 import ItemDetails from './ItemDetails'; // Import your ItemDetails component
 import './ItemDetailsCard.css'; // Import the new card styles
 
-const ItemDetailsPrintWrapper =  ({ items, onRemoveItem }) => {
+const ItemDetailsPrintWrapper =  ({ items, onRemoveItem, onEditItem}) => {
   const componentRef = useRef();
 
   return (
@@ -25,8 +25,16 @@ const ItemDetailsPrintWrapper =  ({ items, onRemoveItem }) => {
             <button 
               className="remove-button" 
               onClick={() => onRemoveItem(index)}
+              data-tooltip="THIS WILL REMOVE THE ITEM"
             >
               ×
+            </button>
+            <button 
+              className="edit-button" 
+              onClick={() => onEditItem(index)} // Call the edit function
+              data-tooltip="THIS WILL HELP TO EDIT"
+            >
+              ✎
             </button>
           </div>
         ))}
