@@ -4,7 +4,7 @@ const stringToBinary = (input) => {
   return input.split('')
     .map(char => char.charCodeAt(0).toString(2).padStart(8, '0'))
     .join('')
-    .slice(0, 14); // Limit the binary string to 20 characters
+    .slice(0,7); // Limit the binary string to 20 characters
 };
 
 const getTodayDate = () => {
@@ -14,7 +14,7 @@ const getTodayDate = () => {
   return `${month}/${year}`; // Remove leading zero from month
 };
 const ItemDetails = forwardRef(({ itemName, barcode, weight, size, hallmark, HUID, shopName, logo },ref) => {
-  barcode = `${stringToBinary(itemName)}-${stringToBinary(weight)}-${stringToBinary(hallmark)}`;
+  barcode = `${stringToBinary(itemName)}-${stringToBinary(weight)}-${stringToBinary(hallmark)} -${stringToBinary(shopName)}-${stringToBinary(size)} -${stringToBinary(HUID)}`;
   return (
     <div className="item-details-container printable-area" ref={ref} >
       {/* First Column: Item Name and Barcode */}
