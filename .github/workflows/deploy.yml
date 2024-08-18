@@ -25,10 +25,10 @@ jobs:
         env:
           REACT_APP_USERNAME: ${{ secrets.REACT_APP_USERNAME }}
           REACT_APP_PASSWORD: ${{ secrets.REACT_APP_PASSWORD }}
-        run: npm predeploy
+        run: npm run build
 
       - name: deploy
-        run: npm deploy
+        run: gh-pages -d build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
