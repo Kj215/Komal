@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Komal/static/css/main.b5ea6508.css",
-    "main.js": "/Komal/static/js/main.cb5361ae.js",
+    "main.js": "/Komal/static/js/main.fa8dccf7.js",
     "static/js/453.f806986b.chunk.js": "/Komal/static/js/453.f806986b.chunk.js",
     "static/media/Hallmark.svg": "/Komal/static/media/Hallmark.1a71323c86e6546d717d2b557e7e0780.svg",
     "index.html": "/Komal/index.html",
     "main.b5ea6508.css.map": "/Komal/static/css/main.b5ea6508.css.map",
-    "main.cb5361ae.js.map": "/Komal/static/js/main.cb5361ae.js.map",
+    "main.fa8dccf7.js.map": "/Komal/static/js/main.fa8dccf7.js.map",
     "453.f806986b.chunk.js.map": "/Komal/static/js/453.f806986b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5ea6508.css",
-    "static/js/main.cb5361ae.js"
+    "static/js/main.fa8dccf7.js"
   ]
 }
