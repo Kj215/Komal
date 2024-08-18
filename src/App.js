@@ -81,7 +81,6 @@ const App = () => {
   };
 
   const handleEditItem = (index) => {
-    const itemToEdit = items[index];
     setEditingItemIndex(index); // Set the index of the item being edited
   };
 
