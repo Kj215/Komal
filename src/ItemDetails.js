@@ -1,5 +1,11 @@
 import React, {forwardRef} from 'react';
 import './ItemDetails.css'; // Importing the CSS file
+const stringToBinary = (input) => {
+  return input.split('')
+    .map(char => char.charCodeAt(0).toString(2).padStart(8, '0'))
+    .join('')
+    .slice(0, 40); // Limit the binary string to 20 characters
+};
 
 const getTodayDate = () => {
   const today = new Date();
@@ -8,6 +14,7 @@ const getTodayDate = () => {
   return `${month}/${year}`; // Remove leading zero from month
 };
 const ItemDetails = forwardRef(({ itemName, barcode, weight, size, hallmark, HUID, shopName, logo },ref) => {
+  barcode = stringToBinary(`${itemName}-${weight}-${hallmark}`);
   return (
     <div className="item-details-container printable-area" ref={ref} >
       {/* First Column: Item Name and Barcode */}
