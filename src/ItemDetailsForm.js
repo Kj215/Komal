@@ -28,6 +28,7 @@ const itemNames = [
   { label: "DHOLNA", value: "DHOLNA" },
   { label: "DIAMOND RING", value: "DI.RING" },
   { label: "SUI DHAGA", value: "SUI DHAGA" },
+  { label: "AMRITSAR BALI", value: "AMT. BALI" },
 ];
 const hallmarks = [
   { label: "18K", value: "18K 750" },
