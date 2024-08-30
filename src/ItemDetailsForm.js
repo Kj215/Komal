@@ -16,7 +16,7 @@ const itemNames = [
   { label: "NOSE PIN", value: "NOSEPIN" },
   { label: "LOCKET", value: "LOCKET" },
   { label: "BANGLE", value: "BANGLE" },
-  { label: "RAJKOT BALI", value: "RJ BALI" },
+  { label: "RAJKOT BALI", value: "RK BALI" },
   { label: "BELLY CHAIN", value: "CHAIN" },
   { label: "TOE RING", value: "TOE RING" },
   { label: "NAIL RING", value: "NAILRING" },
@@ -32,7 +32,10 @@ const itemNames = [
   { label: "V. BALI", value: "V. BALI" },
   { label: "BALI", value: "BALI" },
   { label: "P BALI", value: "P. BALI" },
-];
+  { label: "TIKA", value: "TIKA" },
+  { label: "NATHIYA", value: "NATHIYA" },
+  { label: "ROPE CHAIN", value: "R.CHAIN" },
+]
 const hallmarks = [
   { label: "18K", value: "18K 750" },
   { label: "22K", value: "22K 916" },
