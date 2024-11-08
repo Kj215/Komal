@@ -4,6 +4,8 @@ import ItemDetailsForm from "./ItemDetailsForm";
 import LoginForm from "./LoginForm";
 import "./App.css";
 import logo from "./Hallmark.svg";
+import DigitalClock from './DigitalClock';
+
 
 const user = process.env.NODE_ENV === 'development'
   ? process.env.REACT_APP_USERNAME // Local development URL
@@ -89,6 +91,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <DigitalClock />
       {!isAuthenticated ? (
         <LoginForm onLogin={handleLogin} />
       ) : (
@@ -99,8 +102,10 @@ const App = () => {
             aria-label="Logout"
           > 
           <div>LogOut</div>
+          
             {/* Icon is added via CSS */}
           </button>
+          
           <ItemDetailsForm
             onSubmit={handleFormSubmit}
             initialData={

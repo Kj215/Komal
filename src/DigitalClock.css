@@ -1,0 +1,26 @@
+.clock-container {
+    background-color: #fafafa; /* White background */
+    border: 6px solid #010101; /* Thicker black square border */
+    padding: 20px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.clock-label {
+    color: #666666;
+    font-family: sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.clock-time {
+    color: #fafafa; /* White text */
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #010101; /* Black background where time is ticking */
+    border-radius: 30px; /* Rounded corners for the time display */
+    padding: 5px 15px;
+    display: inline-block; /* Ensure it fits within the square container */
+}
