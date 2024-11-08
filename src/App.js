@@ -71,6 +71,7 @@ const App = () => {
   };
 
   const handleLogout = () => {
+    
     setIsAuthenticated(false);
     setItems([]);
     setEditingItemIndex(null);
