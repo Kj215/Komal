@@ -12,7 +12,7 @@ const user = process.env.NODE_ENV === 'development'
   :process.env.REACT_APP_USERNAME; // GitHub Pages URLS
 const password = process.env.NODE_ENV === 'development'
 ? process.env.REACT_APP_PASSWORD // Local development URL
-:process.env.REACT_APP_PASSWORD; // GitHub Pages URL
+:process.env.REACT_APP_PASSWORD; // GitHub Pages U
 
 
 const App = () => {
