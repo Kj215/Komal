@@ -45,3 +45,12 @@
 .item-details-form button:hover {
   background-color: #0056b3;
 }
+/* Print styles */
+@media print {
+  .item-details-form,.login-button,.logout-button,.clockTime,.clockTime,.DigiClock{
+      display: none; /* Hide the remove button during printing */
+    }
+    .printable-item {
+      page-break-inside: auto ; /* Ensures each item starts on a new page */
+    }
+  }

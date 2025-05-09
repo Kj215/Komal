@@ -139,9 +139,15 @@
 .remove-button:hover {
   color: darkred;
 }
-/* Print styles */
-@media print {
-  .remove-button,.edit-button {
+@media print and (max-width: 100px) {
+  .remove-button,.edit-button,.item-details-container,.printable-area {
     display: none; /* Hide the remove button during printing */
   }
+}
+/* Print styles */
+@media print {
+.edit-button,.remove-button,.print-button,.item-details-container,.printable-area,.login-form,.add-item-button,.clock-container{
+    display: none; /* Hide the remove button during printing */
+  }
+  
 }

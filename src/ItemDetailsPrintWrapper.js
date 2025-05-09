@@ -41,8 +41,8 @@ const ItemDetailsPrintWrapper =  ({ items, onRemoveItem, onEditItem}) => {
       </div>
       
       {/* Print button to trigger printing of all items */}
-      <ReactToPrint
-        trigger={() => <button className="print-button">Print All Items</button>}
+      <ReactToPrint className = "myN"
+        trigger={() => <button className="print-button">Print All</button>}
         content={() => componentRef.current}
         documentTitle="Item Details"
       />

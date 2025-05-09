@@ -92,7 +92,8 @@ const App = () => {
 
   return (
     <div className="app">
-      <DigitalClock />
+      <div className="DigiClock">
+       <DigitalClock />  </div>
       {!isAuthenticated ? (
         <LoginForm onLogin={handleLogin} />
       ) : (

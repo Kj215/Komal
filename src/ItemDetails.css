@@ -91,6 +91,9 @@
     .printable-item {
       page-break-after: always; /* Ensures each item starts on a new page */
     }
+    .item-details-container{
+      display: none;
+    }
   }
   
 

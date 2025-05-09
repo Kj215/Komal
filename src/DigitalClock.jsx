@@ -27,8 +27,8 @@ const DigitalClock = () => {
   return (
     <div>
       <div id="clock">
-        <div id="text">Current local time</div>
-        <div id="time">{time}</div>
+        <div className="clockTime"  id="text">Current local time</div>
+        <div className = "clockTime" id="time">{time}</div>
       </div>
     </div>
   );
