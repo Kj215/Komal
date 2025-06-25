@@ -92,38 +92,43 @@ const ItemDetailsForm = ({ onSubmit,initialData}) => {
 
   return (
     <form onSubmit={handleSubmit} className="item-details-form">
-      <div>
-        <label>Owner:</label>
-        <select
-          name="shopName"
-          value={formData.shopName}
-          onChange={handleChange}
-          required
-        >
-          <option value="">--Select Owner--</option>
-          {Owner.map((shopName, index) => (
-            <option key={index} value={shopName.value}>
-              {shopName.label}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label>Item Name:</label>
-        <select
-          name="itemName"
-          value={formData.itemName}
-          onChange={handleChange}
-          required
-        >
-          <option value="">--Select Item--</option>
-          {itemNames.map((itemName, index) => (
-            <option key={index} value={itemName.value}>
-              {itemName.label}
-            </option>
-          ))}
-        </select>
-      </div>
+     <div>
+  <label>Owner:</label>
+  <input
+    type="text"
+    name="shopName"
+    list="owner-options"
+    value={formData.shopName}
+    onChange={handleChange}
+    required
+  />
+  <datalist id="owner-options">
+    {Owner.map((owner, index) => (
+      <option key={index} value={owner.value}>
+        {owner.label}
+      </option>
+    ))}
+  </datalist>
+</div>
+
+<div>
+  <label>Item Name:</label>
+  <input
+    type="text"
+    name="itemName"
+    list="item-options"
+    value={formData.itemName}
+    onChange={handleChange}
+    required
+  />
+  <datalist id="item-options">
+    {itemNames.map((item, index) => (
+      <option key={index} value={item.value}>
+        {item.label}
+      </option>
+    ))}
+  </datalist>
+</div>
 
       <div>
         <label>Weight:</label>
